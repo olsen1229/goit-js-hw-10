@@ -15,7 +15,7 @@ function chooseBreed() {
         let optionsMarkup = data.map(({ name, id }) => {
             return `<option value=${id}>${name}</option>`;
         });
-        breedSelectEl.insertAdjacentElement("beforeend", optionsMarkup);
+        breedSelectEl.insertAdjacentHTML("beforeend", optionsMarkup);
         breedSelectEl.classList.remove("is-hidden");
     })
     .catch(onError);
